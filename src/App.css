@@ -1,38 +1,340 @@
-.App {
-  text-align: center;
+:root {
+  --navy: #17253d;
+  --navy-soft: #263957;
+  --gold: #f3b83f;
+  --gold-dark: #d99512;
+  --cream: #fffaf0;
+  --paper: #ffffff;
+  --muted: #667085;
+  --line: #e5e8ee;
+  --danger: #b42318;
+  --danger-soft: #fff1f0;
+  --success: #18794e;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button,
+input {
+  font: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
+button {
+  cursor: pointer;
+}
+
+.app-shell {
   min-height: 100vh;
+  padding: 3rem 1rem 2rem;
+  background:
+    radial-gradient(circle at top left, rgba(243, 184, 63, 0.2), transparent 32rem),
+    linear-gradient(145deg, #f9f5e9 0%, #eef3f8 100%);
+  color: var(--navy);
+}
+
+.planner {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid rgba(23, 37, 61, 0.09);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(23, 37, 61, 0.13);
+}
+
+.planner-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1.1rem;
+  padding: 2rem 2.25rem;
   color: white;
+  background: var(--navy);
+  border-bottom: 5px solid var(--gold);
 }
 
-.App-link {
-  color: #61dafb;
+.brand-mark {
+  display: grid;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  color: var(--navy);
+  background: var(--gold);
+  border-radius: 18px 18px 18px 6px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.12);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--gold-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.planner-header .eyebrow {
+  color: var(--gold);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.35rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.65rem;
+}
+
+.intro {
+  margin-bottom: 0;
+  color: #cbd5e1;
+}
+
+.task-form {
+  padding: 2rem 2.25rem;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+
+.task-form label {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-weight: 750;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.form-row input {
+  min-width: 0;
+  flex: 1;
+  padding: 0.9rem 1rem;
+  color: var(--navy);
+  background: white;
+  border: 1px solid #c9ced8;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form-row input:focus {
+  border-color: var(--gold-dark);
+  box-shadow: 0 0 0 3px rgba(243, 184, 63, 0.24);
+}
+
+.primary-button,
+.secondary-button {
+  padding: 0.88rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 750;
+}
+
+.primary-button {
+  color: var(--navy);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.primary-button:hover {
+  background: #ffc94f;
+}
+
+.secondary-button {
+  color: var(--navy);
+  background: white;
+  border: 1px solid #c9ced8;
+}
+
+.form-error {
+  margin: 0.65rem 0 0;
+  color: var(--danger);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.list-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.8rem 2.25rem 1rem;
+}
+
+.task-summary {
+  margin-bottom: 0.1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.task-summary strong {
+  color: var(--navy);
+}
+
+.task-list {
+  margin: 0;
+  padding: 0 2.25rem 2.25rem;
+  list-style: none;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.task-item:last-child {
+  border-bottom: 0;
+}
+
+.check-button {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  place-items: center;
+  color: white;
+  background: white;
+  border: 2px solid #adb5c2;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.completed .check-button {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.task-title {
+  overflow-wrap: anywhere;
+  font-weight: 650;
+}
+
+.completed .task-title {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.edit-button,
+.delete-button {
+  padding: 0.52rem 0.75rem;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.edit-button {
+  color: var(--navy-soft);
+  border: 1px solid #c9ced8;
+}
+
+.delete-button {
+  color: var(--danger);
+  background: var(--danger-soft);
+  border: 1px solid #f1c0bb;
+}
+
+.empty-state {
+  margin: 0 2.25rem 2.25rem;
+  padding: 2.2rem 1rem;
+  text-align: center;
+  background: var(--cream);
+  border: 1px dashed #d6c59d;
+  border-radius: 14px;
+}
+
+.empty-state p {
+  margin-bottom: 0.25rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.empty-state span,
+.storage-note {
+  color: var(--muted);
+}
+
+.storage-note {
+  margin: 1rem auto 0;
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(217, 149, 18, 0.42);
+  outline-offset: 2px;
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    padding: 1rem 0.65rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .planner {
+    border-radius: 18px;
+  }
+
+  .planner-header,
+  .task-form,
+  .list-heading {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .task-list {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .form-row {
+    flex-wrap: wrap;
+  }
+
+  .form-row input {
+    flex-basis: 100%;
+  }
+
+  .primary-button,
+  .secondary-button {
+    flex: 1;
+  }
+
+  .list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .task-item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .task-actions {
+    grid-column: 2;
   }
 }
