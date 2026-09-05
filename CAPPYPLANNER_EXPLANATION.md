@@ -66,6 +66,8 @@ The application asks for confirmation and uses `filter()` to create an array wit
 const remainingTasks = tasks.filter((task) => task.id !== id);
 ```
 
+`window.confirm()` is a built-in browser function, not a React hook. It opens a simple OK/Cancel message. If the user chooses OK, it returns `true`; if the user chooses Cancel, it returns `false`. It is used here because the activity specifically requires a confirmation prompt before deletion.
+
 ## Form validation
 
 `trim()` removes extra spaces. If the result is empty, the function displays an error and stops using `return`. After a successful add or edit, the input and error message reset.

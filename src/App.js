@@ -92,12 +92,9 @@ function App() {
     <main className="app-shell">
       <section className="planner" aria-labelledby="planner-title">
         <header className="planner-header">
-          <div className="brand-mark" aria-hidden="true">C</div>
-
           <div>
-            <p className="eyebrow">MY DAILY PLANNER</p>
             <h1 id="planner-title">CappyPlanner</h1>
-            <p className="intro">Keep your day clear, calm, and manageable.</p>
+            <p className="intro">Your calm space for organizing today's tasks.</p>
           </div>
         </header>
 
