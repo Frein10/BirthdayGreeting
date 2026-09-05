@@ -1,0 +1,143 @@
+.birthday-app { overflow: hidden; min-height: 100vh; background: radial-gradient(ellipse at 77% 25%, #30204466 0, transparent 39%), radial-gradient(ellipse at 5% 60%, #48264625, transparent 40%), #100c1a; }
+.site-header { max-width: 1440px; padding: 27px 6%; margin: auto; position: relative; z-index: 2; border-bottom: 1px solid #ffffff0c; }
+.brand { font-family: Georgia, serif; font-size: 19px; letter-spacing: -.5px; }
+.brand svg, .brand > span { color: var(--gold); }
+.brand > span { margin-left: -7px; }
+.site-header nav { font-size: 14px; color: var(--muted); }
+.site-header a:hover { color: var(--gold); }
+.sound-button { min-height: 44px; background: #ffffff05; border: 1px solid #ffffff1c; border-radius: 30px; padding: 9px 15px; font-size: 12px; color: #d2c6df; }
+.section-width { max-width: 1240px; width: 88%; margin-inline: auto; }
+.hero { min-height: 695px; display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; position: relative; padding-top: 35px; padding-bottom: 90px; }
+.hero-copy { position: relative; z-index: 1; }
+.eyebrow { display: flex; align-items: center; gap: 10px; color: #d5b883; font-size: 12px; font-weight: 700; letter-spacing: 2px; line-height: 1.8; }
+.eyebrow > span { width: 5px; height: 5px; flex-shrink: 0; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+.hero h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(58px, 6.4vw, 89px); font-weight: 400; letter-spacing: -4.5px; line-height: 1.06; margin: 24px 0; position: relative; }
+.hero h1 > span { font-style: italic; color: var(--gold); }
+.headline-star { color: var(--gold); display: inline-block; width: 33px; height: 33px; margin-left: 15px; vertical-align: top; }
+.hero-recipient { font-size: 21px; margin: 23px 0 14px; overflow-wrap: anywhere; }
+.hero-recipient span { color: #d0b0ec; margin-left: 6px; }
+.hero-description { font-size: 16px; color: var(--muted); line-height: 1.85; margin: 0 0 28px; }
+.gold-button { display: inline-flex; align-items: center; justify-content: center; gap: 13px; min-height: 52px; border: 1px solid #f4d698; border-radius: 9px; padding: 14px 22px; background: linear-gradient(110deg, #f6dda9, #dfb977); box-shadow: 0 5px 30px #e3bd7918; color: #2b2031; font-weight: 700; font-size: 14px; transition: box-shadow .2s; }
+.gold-button:hover { box-shadow: 0 6px 35px #e3bd7940; }
+.tap-note { font-size: 12px; color: #a99db9; margin-top: 14px; letter-spacing: .3px; }
+.gift-stage { position: relative; min-width: 0; height: 490px; display: grid; place-items: center; }
+.gift-art { position: relative; width: 115%; max-width: none; mix-blend-mode: screen; mask-image: radial-gradient(ellipse, black 45%, transparent 72%); }
+.orbit { position: absolute; border: 1px solid #ccb0dd12; width: 450px; height: 450px; border-radius: 50%; pointer-events: none; }
+.orbit-two { width: 345px; height: 345px; }
+.gift-label { position: absolute; bottom: 0; font-family: Georgia, serif; font-size: 19px; font-style: italic; color: #c8b4d8; transform: rotate(-7deg); }
+.scroll-note { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; white-space: nowrap; font-size: 12px; letter-spacing: 1.5px; color: #a99db9; }
+.birthday-ribbon { border-block: 1px solid #c6a3e223; display: flex; align-items: center; justify-content: space-evenly; gap: 34px; overflow: hidden; white-space: nowrap; padding: 20px 25px; font-size: 12px; letter-spacing: 2px; color: #c0a8d9; background: #21152d80; }
+.birthday-ribbon svg { flex-shrink: 0; color: #d3b782; }
+.surprises { padding-block: 65px 70px; }
+.section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 30px; }
+.surprises h2 { font-family: Georgia, serif; font-size: 34px; font-weight: 400; letter-spacing: -.8px; margin-top: 10px; }
+.surprises h2 em { color: #c5a5da; }
+.section-heading > p { font-size: 12px; color: var(--muted); padding-bottom: 4px; }
+.glass-panel { border: 1px solid #dbc5f21a; background: linear-gradient(145deg,#ffffff05,#ffffff02); border-radius: 14px; padding: 30px; }
+.glass-panel h3 { font: 24px Georgia, serif; margin: 25px 0 12px; }
+.glass-panel p { font-size: 16px; line-height: 1.7; color: var(--muted); }
+footer { border-top: 1px solid #ffffff0b; display: flex; justify-content: center; align-items: center; gap: 6px; color: #a496b4; padding: 25px 20px; font-size: 12px; }
+footer svg { color: #c09cce; }
+@media (max-width: 900px) { .hero h1 { font-size: 64px; } .gift-stage { height: 430px; } .orbit-one { width: 360px; height: 360px; } .orbit-two { width: 280px; height: 280px; } .glass-panel { padding: 22px; } .section-heading > p { display: none; } }
+@media (max-width: 640px) { .site-header { padding: 18px 6%; } .brand { font-size: 16px; } .sound-button { padding: 10px; min-width: 44px; justify-content: center; } .sound-button span { display: none; } .hero { grid-template-columns: 1fr; padding-top: 42px; padding-bottom: 70px; gap: 0; text-align: center; } .hero .eyebrow { justify-content: center; font-size: 12px; letter-spacing: 1px; } .hero h1 { font-size: clamp(49px, 12vw, 70px); letter-spacing: -2.8px; margin: 20px 0; } .headline-star { width: 22px; margin-left: 10px; } .hero-recipient { font-size: 19px; } .gift-stage { height: 310px; margin-top: 14px; } .gift-art { width: 350px; max-width: 110%; } .orbit-one { width: 275px; height: 275px; } .orbit-two { width: 220px; height: 220px; } .gift-label { bottom: 4px; font-size: 16px; } .birthday-ribbon { justify-content: flex-start; padding: 17px 20px; gap: 24px; } .surprises { padding-block: 42px; } .surprises h2 { font-size: 28px; } .scroll-note { bottom: 22px; font-size: 12px; letter-spacing: .6px; } }
+.skip-link { position: fixed; top: -80px; left: 15px; z-index: 100; background: var(--gold); color: #24162c; padding: 12px 18px; border-radius: 8px; }
+.skip-link:focus { top: 15px; }
+.sound-playing { color: var(--gold); border-color: #e9c98950; }
+.audio-error { padding-top: 16px; color: var(--gold); font-size: 14px; line-height: 1.6; }
+.star-field { position: absolute; inset: 0 -6%; pointer-events: none; }
+.star-field > span { position: absolute; color: #d7bd93; opacity: .45; font-size: 20px; }
+.star-field > .large-star { font-size: 12px; color: #bf9be1; }
+.party-started .star-field > span { animation: twinkle 4s ease-in-out infinite; }
+@keyframes twinkle { 0%, 100% { opacity: .2; transform: scale(.8); } 50% { opacity: .8; transform: scale(1.15); } }
+.gift-art-button { position: relative; width: 112%; background: none; padding: 0; border: 0; border-radius: 50%; }
+.gift-art-button .gift-art { width: 100%; max-width: 100%; mask-image: radial-gradient(ellipse, black 46%, transparent 71%); -webkit-mask-image: radial-gradient(ellipse, black 46%, transparent 71%); }
+.gift-tag { position: absolute; top: 40px; right: 12px; display: flex; align-items: center; gap: 7px; border: 1px solid #d6b7f226; border-radius: 5px; background: #241a35ad; padding: 9px 12px; font-size: 10px; letter-spacing: 1.7px; color: #d7c3df; transform: rotate(8deg); pointer-events: none; }
+.surprise-grid { display: grid; grid-template-columns: 1fr 1.1fr 1fr; gap: 22px; }
+.glass-panel { min-width: 0; position: relative; display: flex; flex-direction: column; }
+.panel-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.panel-icon { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid #d5b9e920; border-radius: 9px; color: #d5b9e9; background: #bb92d207; }
+.panel-number { color: #b6a7c7; font-size: 10px; letter-spacing: 1.5px; }
+.envelope-button { position: relative; height: 215px; display: grid; place-items: center; color: #d6bfe2; background: none; border: none; width: 100%; transition: transform .3s; }
+.envelope-button:hover { transform: rotate(-3deg) translateY(-3px); }
+.envelope-button > svg { width: 154px; height: 134px; transform: rotate(-9deg); filter: drop-shadow(0 8px 18px #bd8ede22); }
+.wax-seal { position: absolute; left: calc(50% - 18px); top: 92px; height: 39px; width: 39px; display: grid; place-items: center; color: #553345; background: linear-gradient(145deg,#edc580,#a9754d); border-radius: 50%; border: 3px double #f0ce9566; box-shadow: 0 3px 12px #0005; transform: rotate(-9deg); }
+.envelope-note { position: absolute; top: 169px; font-family: Georgia,serif; font-size: 16px; font-style: italic; color: #c6b0d9; transform: rotate(-7deg); }
+.glass-panel h3 { font-size: 23px; margin: 10px 0 12px; }
+.glass-panel p { font-size: 14px; margin: 0 0 12px; min-height: 48px; }
+.text-button { color: var(--gold); display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 12px 0 2px; min-height: 44px; font-size: 14px; background: none; border: none; margin-top: auto; }
+.text-button:hover { color: #fff0d7; }
+.polaroid-stage { height: 215px; position: relative; display: grid; place-items: center; padding: 18px 15px 15px; }
+.polaroid { position: relative; width: 88%; max-width: 220px; background: #eee7dd; padding: 8px 8px 0; transform: rotate(-6deg); box-shadow: 0 8px 20px #0005; border-radius: 2px; border: none; color: #493640; }
+.polaroid img { display: block; width: 100%; height: 126px; object-fit: cover; }
+.polaroid > span { display: flex; gap: 7px; justify-content: center; align-items: center; font-family: Georgia,serif; font-style: italic; font-size: 12px; line-height: 1.4; padding: 11px 0; }
+.polaroid-back { position: absolute; width: 71%; max-width: 205px; height: 160px; padding: 8px 8px 22px; background: #cdc1c0; box-shadow: 0 8px 20px #0005; transform: rotate(10deg) translate(12px,-4px); }
+.polaroid-back img { width: 100%; height: 100%; object-fit: cover; opacity: .8; }
+.polaroid-sparkle { position: absolute; right: -3px; bottom: 24px; color: var(--gold); }
+.photo-fallback { display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; background: #3a294b; color: #e2d2e8; min-height: 126px; padding: 20px; font-size: 12px; }
+.memory-controls { display: flex; align-items: center; gap: 14px; margin-top: auto; color: #d9bce9; }
+.memory-controls > span { font-size: 12px; letter-spacing: 1px; }
+.memory-controls > span > span { color: #a99ab7; }
+.icon-button { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 1px solid #d5b9e920; border-radius: 50%; background: #ffffff03; color: #e1cdef; }
+.icon-button:hover { background: #d5b9e914; border-color: #d5b9e955; }
+.icon-button:disabled { opacity: .35; }
+.cake-stage { height: 215px; position: relative; isolation: isolate; }
+.cake-stage > img { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 260px; max-width: none; height: 260px; object-fit: contain; mix-blend-mode: screen; mask-image: radial-gradient(ellipse,black 45%,transparent 71%); -webkit-mask-image: radial-gradient(ellipse,black 45%,transparent 71%); pointer-events: none; }
+.candles { position: absolute; left: 50%; top: 14px; transform: translateX(-50%); display: flex; width: 220px; height: 80px; align-items: flex-end; }
+.candle { border: none; background: none; position: relative; width: 44px; height: 80px; padding: 0; display: flex; align-items: center; flex-direction: column; justify-content: flex-end; }
+.candle-stick { width: 7px; height: 41px; border-radius: 3px 3px 1px 1px; background: repeating-linear-gradient(135deg,#fff0bf 0px,#fff0bf 5px,#c085cf 5px,#c085cf 9px); box-shadow: 2px 2px 4px #0005; }
+.candle:nth-child(even) .candle-stick { height: 50px; }
+.flame { position: absolute; bottom: 38px; font-size: 25px; line-height: 1; filter: drop-shadow(0 0 8px #ffc778); transform-origin: bottom center; animation: flicker 1.3s ease-in-out infinite alternate; }
+.candle:nth-child(even) .flame { bottom: 47px; animation-delay: .4s; }
+.blown .flame { display: none; }
+.candle-smoke { display: none; position: absolute; bottom: 45px; color: #decce8; font-size: 22px; }
+.blown .candle-smoke { display: block; animation: smoke 1s ease-out forwards; }
+.candle-hint { display: flex; align-items: center; gap: 7px; color: #c0a5d5; font-size: 12px; min-height: 44px; margin-top: auto; }
+.wish-actions { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+.wish-actions .text-button { margin-top: 0; padding-top: 0; }
+@keyframes flicker { from { transform: rotate(-5deg) scale(.92); } to { transform: rotate(4deg) scale(1.06); } }
+@keyframes smoke { to { opacity: 0; transform: translateY(-25px); } }
+.celebrate-section { display: flex; align-items: center; justify-content: space-between; margin-top: 45px; padding: 32px 38px; border-radius: 12px; border: 1px solid #d1aed819; background: radial-gradient(ellipse at right,#7d3b9520,transparent),#ffffff02; gap: 25px; }
+.celebrate-copy { position: relative; }
+.celebrate-section h2 { font-size: 24px; margin: 0 0 9px; }
+.celebrate-section p { color: var(--muted); font-size: 14px; margin: 0; }
+.tiny-stars { display: block; font-size: 19px; color: var(--gold); margin-bottom: 9px; }
+.celebrate-button { display: flex; justify-content: center; align-items: center; gap: 11px; padding: 15px 23px; background: #ad87d11b; border: 1px solid #c19bda50; border-radius: 9px; color: #e1c3f3; font-size: 14px; min-height: 51px; flex-shrink: 0; }
+.celebrate-button:hover { background: #ad87d12e; }
+.celebration-status { position: fixed; bottom: max(23px,env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); z-index: 25; pointer-events: none; width: max-content; max-width: 90vw; }
+.celebration-status > span { display: flex; align-items: center; gap: 9px; border: 1px solid #d1acd34a; background: #33213ded; color: #f1ddf9; border-radius: 30px; padding: 12px 19px; font-size: 13px; box-shadow: 0 8px 30px #0004; }
+.party-particles { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 22; }
+.party-particles > span { position: absolute; bottom: -40px; font-size: 30px; }
+.birthday-dialog { color: #ede5f4; background: #21162e; width: min(590px,calc(100% - 30px)); max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); margin: auto; padding: 0; border: 1px solid #c9a6e844; border-radius: 17px; box-shadow: 0 30px 140px #0009; overflow: auto; overscroll-behavior: contain; }
+.birthday-dialog::backdrop { background: #0a0614b8; backdrop-filter: blur(8px); }
+.dialog-inner { position: relative; padding: 45px; }
+.dialog-close { position: absolute; right: 13px; top: 13px; z-index: 1; }
+.birthday-dialog .eyebrow { font-size: 10px; letter-spacing: 1.8px; margin: 24px 0 16px; }
+.birthday-dialog h2 { font-family: Georgia,serif; font-size: 35px; color: var(--gold); line-height: 1.2; margin: 0 0 23px; overflow-wrap: anywhere; }
+.birthday-dialog p { font-size: 16px; color: #cbbbd8; line-height: 1.85; margin-bottom: 18px; }
+.birthday-dialog .letter-lead { font-family: Georgia,serif; font-size: 22px; font-style: italic; color: #ecddf5; line-height: 1.5; }
+.letter-stamp { width: 60px; height: 60px; display: grid; place-items: center; border: 1px solid #e6c18166; border-radius: 50%; color: var(--gold); transform: rotate(-10deg); background: #e6c18109; }
+.signature { margin-top: 28px; padding-top: 22px; border-top: 1px solid #c9a6e820; display: flex; align-items: flex-start; gap: 8px; flex-direction: column; color: var(--gold); }
+.signature span { color: #c7aecf; font-size: 14px; font-style: italic; }
+.signature strong { font: italic 22px Georgia,serif; line-height: 1.4; overflow-wrap: anywhere; }
+.signature svg { margin-top: 5px; }
+.wish-reveal { text-align: center; padding-block: 20px; }
+.wish-reveal > svg { color: var(--gold); margin: auto; }
+.wish-reveal .eyebrow { justify-content: center; }
+.wish-reveal h2 { font-size: 39px; }
+.wish-reveal h2 em { color: #d4b6ed; }
+.wish-reveal .gold-button { margin-top: 12px; }
+.photo-dialog { width: min(720px,calc(100% - 30px)); }
+.photo-dialog .dialog-inner { padding: 22px; }
+.photo-dialog .dialog-close { background: #20142ee8; }
+.full-memory { width: 100%; max-height: 60vh; object-fit: contain; border-radius: 7px; background: #140d1e; }
+.photo-dialog h2 { font-size: 27px; margin-bottom: 8px; }
+.photo-dialog p { margin-bottom: 0; }
+@media (max-width: 1100px) and (min-width: 901px) { .glass-panel { padding: 23px; } .panel-number { font-size: 9px; letter-spacing: 1px; } .glass-panel h3 { font-size: 21px; } }
+@media (max-width: 900px) { .surprise-grid { grid-template-columns: 1fr 1fr; } .cake-panel { grid-column: 1 / -1; width: min(100%,450px); justify-self: center; } .panel-number { font-size: 11px; letter-spacing: 1px; } .celebrate-section { padding: 26px; } .gift-tag { right: -12px; top: 65px; font-size: 9px; } }
+@media (max-width: 640px) { .gift-art-button { width: 350px; max-width: 110%; } .gift-art-button .gift-art { max-width: 100%; width: 100%; } .gift-tag { top: 20px; right: 5px; font-size: 9px; padding: 7px 9px; } .surprise-grid { grid-template-columns: 1fr; gap: 20px; } .glass-panel { padding: 24px; } .cake-panel { grid-column: auto; width: 100%; } .glass-panel h3 { font-size: 25px; } .glass-panel p { font-size: 16px; min-height: 0; } .glass-panel .text-button { margin-top: 7px; } .polaroid { max-width: 215px; } .memory-controls { margin-top: 8px; } .panel-number { font-size: 11px; } .polaroid-sparkle { right: 8%; } .celebrate-section { text-align: center; flex-direction: column; gap: 23px; padding: 27px 20px; margin-top: 25px; } .celebrate-section h2 { font-size: 27px; line-height: 1.3; } .celebrate-button { width: 100%; } .dialog-inner { padding: 35px 24px; } .birthday-dialog h2 { font-size: 30px; } .birthday-dialog .eyebrow { font-size: 10px; } .wish-reveal h2 { font-size: 34px; } footer { font-size: 11px; padding-bottom: max(25px,env(safe-area-inset-bottom)); } }
+@media (prefers-reduced-motion: reduce) { .star-field > span, .flame, .candle-smoke { animation: none !important; } .blown .candle-smoke { display: none; } }
+/* Keep the full family photo visible, including portrait pictures. */
+.polaroid img, .polaroid-back img { object-fit: contain; background: #d9ced1; }
+.polaroid > span { min-height: 43px; overflow-wrap: anywhere; }
+.panel-number { letter-spacing: .8px; }
+@media (max-width: 360px) { .brand { font-size: 14px; } .panel-number { font-size: 10px; } .hero .eyebrow { font-size: 11px; } }
